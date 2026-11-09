@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07110c">
+  <title>NKT · Nashediyon Ki Toli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="sidebar" aria-label="Nashediyon Ki Toli club sidebar">
+    <header class="masthead">
+      <div class="crest" aria-hidden="true">
+        <span class="crest-crown">♛</span><span class="crest-knight">♞</span>
+        <span class="crest-letters">NKT</span>
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">The Chess Society</p>
+        <h1>Nashediyon<br>Ki Toli</h1>
+        <p class="motto">NEXUS <i>·</i> KNOWLEDGE <i>·</i> TRIUMPH</p>
+      </div>
+      <span class="corner-star" aria-hidden="true">✦</span>
+      <p class="brand-line">Where minds meet,<br>legends begin.</p>
+    </header>
+
+    <section class="stats-strip" aria-label="Club statistics">
+      <div class="stat">
+        <span class="stat-icon">♟</span>
+        <strong id="member-count">—</strong>
+        <small>Members</small>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">♜</span>
+        <strong id="daily-rating">—</strong>
+        <small>Avg. Daily</small>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">♛</span>
+        <strong id="club-age">—</strong>
+        <small>Founded</small>
+      </div>
+    </section>
+
+    <section class="panel welcome-panel">
+      <div class="section-heading"><span>✧</span><h2>THE CIRCLE</h2><span class="live-indicator"><i></i> API</span></div>
+      <p id="club-description" class="club-description">Connecting to the public club record…</p>
+      <p id="club-status" class="status-note" role="status">Fetching club information</p>
+    </section>
+
+    <section class="panel members-panel">
+      <div class="section-heading"><span>♟</span><h2>RECENTLY JOINED</h2><span class="section-mark">NKT</span></div>
+      <div id="recent-members" class="member-list" aria-live="polite">
+        <p class="loading">Finding the newest faces…</p>
+      </div>
+      <a class="text-link" href="https://www.chess.com/club/nashediyon-ki-toli-nkt/members" target="_blank" rel="noopener">View club members <span>↗</span></a>
+    </section>
+
+    <section class="panel links-panel">
+      <div class="section-heading"><span>⌁</span><h2>QUICK LINKS</h2></div>
+      <nav class="quick-grid" aria-label="Quick links">
+        <a href="https://www.chess.com/club/nashediyon-ki-toli-nkt" target="_blank" rel="noopener"><span>♜</span>Club Home</a>
+        <a href="https://www.chess.com/club/nashediyon-ki-toli-nkt/members" target="_blank" rel="noopener"><span>♟</span>Members</a>
+        <a href="https://www.chess.com/club/nashediyon-ki-toli-nkt/tournaments" target="_blank" rel="noopener"><span>♛</span>Tournaments</a>
+        <a href="https://www.chess.com/club/nashediyon-ki-toli-nkt/matches" target="_blank" rel="noopener"><span>⚔</span>Team Matches</a>
+      </nav>
+    </section>
+
+    <section class="panel music-panel">
+      <div class="section-heading"><span>♫</span><h2>THE NKT PLAYER</h2><span class="music-state" id="music-state">READY</span></div>
+      <div class="player-main">
+        <div class="record-art" aria-hidden="true"><span>♞</span></div>
+        <div class="track-meta">
+          <strong id="track-title">The First Move</strong>
+          <small id="track-subtitle">NKT sound archive · Track 01</small>
+        </div>
+        <button class="play-button" id="play-toggle" type="button" aria-label="Play music" disabled>▶</button>
+      </div>
+      <div class="progress-wrap">
+        <span id="current-time">0:00</span>
+        <input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek through track" disabled>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="player-controls">
+        <button id="previous-track" type="button" aria-label="Previous track">↶</button>
+        <label class="track-select-label" for="track-select">TRACK</label>
+        <select id="track-select" aria-label="Choose a track">
+          <option value="0">01 · The First Move</option>
+          <option value="1">02 · Midnight Gambit</option>
+          <option value="2">03 · Quiet Calculations</option>
+          <option value="3">04 · The King's March</option>
+          <option value="4">05 · After the Checkmate</option>
+        </select>
+        <button id="repeat-toggle" type="button" aria-pressed="false" aria-label="Repeat track">⟳</button>
+        <button id="next-track" type="button" aria-label="Next track">↷</button>
+      </div>
+      <p class="music-hint" id="music-hint">Add your five audio files to <code>assets/music/</code> to enable playback.</p>
+      <audio id="audio-player" preload="none"></audio>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-emblems"><span>♞</span><span>✥</span><span>♜</span></div>
+      <p>NKT <b>·</b> EST. <span id="footer-year">—</span></p>
+      <small>Independent community sidebar · Not affiliated with Chess.com</small>
+    </footer>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
